@@ -14,10 +14,10 @@ TBA.
 ## Features
 Currently, only the UI is (almost) done but with no functionality yet. The first finished version will allow you to save links from the web in folders which you can add, edit and customize.
 
-Planned features:
-⬜ Collapsible nested folders
-⬜ Preview image in saved links
-⬜ Login for synchronization between devices
+**Planned features:**  
+⬜ Collapsible nested folders  
+⬜ Preview image in saved links  
+⬜ Login for synchronization between devices  
 ⬜ Browser plugin to save links via context menu
 
 If you have any more ideas or feature requests, feel free to let me know!
