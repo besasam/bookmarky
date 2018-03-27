@@ -1,0 +1,40 @@
+body {
+  background-color: #212121;
+  color: #EEEEEE;
+}
+
+.nav h1 {
+  color: white;
+}
+
+.sidebar-header {
+  border-bottom: 1px solid #424242;
+}
+
+.sidebar-header h1 {
+  color: #BDBDBD;
+}
+
+.folder-add-button {
+  color: #BDBDBD;
+}
+
+.folder-add-button:hover {
+  color: white;
+}
+
+.fa-li {
+  color: #BDBDBD;
+}
+
+.card {
+  background-color: #424242;
+}
+
+.card h2 {
+  color: #BDBDBD;
+}
+
+.modal-content {
+    background-color: #212121;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link id="css-color" rel="stylesheet" href="assets/css/light.css" type="text/css">
+    <script src="assets/fa/fontawesome-all.min.js"></script>
+    <title>Bookmarky</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <header class="header">
+        <div class="nav">
+          <h1><i class="fal fa-bookmark"></i> Bookmarky</h1>
+          <button class="theme-toggle" id="theme-toggle"><i id="theme-toggle-icon" class="fa-fw fa-lg far fa-lightbulb"></i></button>
+        </div>
+      </header>
+
+      <nav class="sidebar">
+        <div class="sidebar-header">
+          <h1>Folders</h1>
+          <button class="folder-add-button" id="folder-add-button"><i class="fa-fw fas fa-plus"></i></button>
+        </div>
+
+        <div class="folders" id="folders">
+          <div class="folder">
+            <a class="folder-icon"><i class="fa-fw fas fa-folder"></i></a> <a class="folder-text">Folder 1</a> <a class="folder-settings hidden"><i class="fa-fw fas fa-cog"></i></a>
+          </div>
+          <div class="folder">
+            <a class="folder-icon"><i class="fa-fw fas fa-folder"></i></a> <a class="folder-text">Folder 2</a> <a class="folder-settings hidden"><i class="fa-fw fas fa-cog"></i></a>
+          </div>
+          <div class="folder">
+            <a class="folder-icon"><i class="fa-fw fas fa-folder"></i></a> <a class="folder-text">Folder 3</a> <a class="folder-settings hidden"><i class="fa-fw fas fa-cog"></i></a>
+          </div>
+        </div>
+
+        <div id="folder-modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="folder-form">
+              <div class="folder-form">
+                <div class="folder-input-name">
+                  <label for="folder-name">Folder name:</label>
+                  <input type="text" name="folder-name" id="folder-name">
+                </div>
+                <div class="folder-input-icon">
+                  <label>Icon:</label>
+                  <div class="folder-select-wrapper">
+                    <div class="icon-select" id="fa-folder"><i class="fa-fw fas fa-folder"></i></div>
+                    <div class="icon-select" id="fa-book"><i class="fa-fw fas fa-book"></i></div>
+                    <div class="icon-select" id="fa-bookmark"><i class="fa-fw fas fa-bookmark"></i></div>
+                    <div class="icon-select" id="fa-calendar-alt"><i class="fa-fw fas fa-calendar-alt"></i></div>
+
+                    <div class="icon-select" id="fa-window"><i class="fa-fw fas fa-window"></i></div>
+                    <div class="icon-select" id="fa-chart-pie"><i class="fa-fw fas fa-chart-pie"></i></div>
+                    <div class="icon-select" id="fa-quote-left"><i class="fa-fw fas fa-quote-left"></i></div>
+                    <div class="icon-select" id="fa-cloud"><i class="fa-fw fas fa-cloud"></i></div>
+
+                    <div class="icon-select" id="fa-pencil"><i class="fa-fw fas fa-pencil"></i></div>
+                    <div class="icon-select" id="fa-paint-brush"><i class="fa-fw fas fa-paint-brush"></i></div>
+                    <div class="icon-select" id="fa-music"><i class="fa-fw fas fa-music"></i></div>
+                    <div class="icon-select" id="fa-heart"><i class="fa-fw fas fa-heart"></i></div>
+
+                    <div class="icon-select" id="fa-comment"><i class="fa-fw fas fa-comment"></i></div>
+                    <div class="icon-select" id="fa-graduation-cap"><i class="fa-fw fas fa-graduation-cap"></i></div>
+                    <div class="icon-select" id="fa-map-marker-alt"><i class="fa-fw fas fa-map-marker-alt"></i></div>
+                    <div class="icon-select" id="fa-trash-alt"><i class="fa-fw fas fa-trash-alt"></i></div>
+                  </div>
+                </div>
+                <div class="folder-input-color">
+                  <label>Color:</label>
+                  <div class="folder-select-wrapper">
+                    <div class="color-select"><i class="fa-fw fas fa-square"></i></div>
+                    <div class="color-select" id="F44336" style="color: #F44336;"><i class="fa-fw fas fa-square"></i></div>
+                    <div class="color-select" id="E91E63" style="color: #E91E63;"><i class="fa-fw fas fa-square"></i></div>
+                    <div class="color-select" id="9C27B0" style="color: #9C27B0;"><i class="fa-fw fas fa-square"></i></div>
+
+                    <div class="color-select" id="673AB7" style="color: #673AB7;"><i class="fa-fw fas fa-square"></i></div>
+                    <div class="color-select" id="3F51B5" style="color: #3F51B5;"><i class="fa-fw fas fa-square"></i></div>
+                    <div class="color-select" id="2196F3" style="color: #2196F3;"><i class="fa-fw fas fa-square"></i></div>
+                    <div class="color-select" id="03A9F4" style="color: #03A9F4;"><i class="fa-fw fas fa-square"></i></div>
+
+                    <div class="color-select" id="00BCD4" style="color: #00BCD4;"><i class="fa-fw fas fa-square"></i></div>
+                    <div class="color-select" id="009688" style="color: #009688;"><i class="fa-fw fas fa-square"></i></div>
+                    <div class="color-select" id="4CAF50" style="color: #4CAF50;"><i class="fa-fw fas fa-square"></i></div>
+                    <div class="color-select" id="8BC34A" style="color: #8BC34A;"><i class="fa-fw fas fa-square"></i></div>
+
+                    <div class="color-select" id="FFEB3B" style="color: #FFEB3B;"><i class="fa-fw fas fa-square"></i></div>
+                    <div class="color-select" id="FFC107" style="color: #FFC107;"><i class="fa-fw fas fa-square"></i></div>
+                    <div class="color-select" id="FF9800" style="color: #FF9800;"><i class="fa-fw fas fa-square"></i></div>
+                    <div class="color-select" id="FF5722" style="color: #FF5722;"><i class="fa-fw fas fa-square"></i></div>
+                  </div>
+                </div>
+              </div>
+              <div class="folder-form-buttons">
+                <button type="button" class="button delete-button">Delete</button>
+                <button type="submit" class="button submit-button">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </nav>
+
+      <main class="main">
+        <section class="card">
+          <h1>Card 1 Title</h1>
+          <h2>Card 1 URL</h2>
+          <p>
+            Card 1 Text
+          </p>
+        </section>
+
+        <section class="card">
+          <h1>Card 2 Title</h1>
+          <h2>Card 2 URL</h2>
+          <p>
+            Card 2 Text
+          </p>
+        </section>
+
+        <section class="card">
+          <h1>Card 3 Title</h1>
+          <h2>Card 3 URL</h2>
+          <p>
+            Card 3 Text
+          </p>
+        </section>
+      </main>
+
+    </div>
+
+    <script src="assets/js/bundle.js"></script>
+
+  </body>
+</html>

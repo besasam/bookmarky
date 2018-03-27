@@ -1,0 +1,11 @@
+{
+  "name": "Bookmarky",
+  "version": "1.0.0",
+  "description": "A sleek and simple bookmark manager",
+  "repository": "https://github.com/besasam/bookmarky",
+  "author": "Besasam",
+  "license": "GPLv3",
+  "dependencies": {
+    "sortablejs": "^1.7.0"
+  }
+}
