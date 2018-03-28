@@ -2,6 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/grid.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <link id="css-color" rel="stylesheet" href="assets/css/light.css" type="text/css">
     <script src="assets/fa/fontawesome-all.min.js"></script>
@@ -11,43 +14,99 @@
     <div class="container">
 
       <header class="header">
-        <div class="nav">
-          <h1><i class="fal fa-bookmark"></i> Bookmarky</h1>
-          <button class="theme-toggle" id="theme-toggle"><i id="theme-toggle-icon" class="fa-fw fa-lg far fa-lightbulb"></i></button>
-        </div>
+        <nav class="nav">
+          <div class="header-title"><h1><i class="header-logo far fa-bookmark"></i> Bookmarky</h1></div>
+          <div class="header-buttons"><button class="theme-toggle" id="theme-toggle"><i id="theme-toggle-icon" class="fa-fw fa-lg far fa-lightbulb"></i></button></div>
+        </nav>
       </header>
 
-      <nav class="sidebar">
+      <main class="main">
+        <section class="card">
+          <div class="card-image">
+            <img src="http://i0.kym-cdn.com/photos/images/original/000/948/031/828.jpg">
+          </div>
+          <div class="card-content">
+            <h1>Card 1 Title</h1>
+            <h2>Card 1 URL</h2>
+            <p>
+              Card 1 Text
+            </p>
+          </div>
+          <div class="card-footer">
+            <p>
+              Card 1 footer
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-image">
+            <img src="https://i.redditmedia.com/OjE1SN5zkH1FNsuzV6Ib9adMS8RDH6B2NkDOe60ItBM.jpg?w=614&s=172305f9782d03596783d99b79258c3f">
+          </div>
+          <div class="card-content">
+            <h1>Card 2 Title</h1>
+            <h2>Card 2 URL</h2>
+            <p>
+              Card 2 Text
+            </p>
+          </div>
+          <div class="card-footer">
+            <p>
+              Card 2 footer
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-image">
+            <img src="https://i.redditmedia.com/nDukCdtm4chdf7fzr1AytD2W8UR90YWIqEByFRRElxE.jpg?w=432&s=4d80e2eb3b6b399561bbc35c0afb78b5">
+          </div>
+          <div class="card-content">
+            <h1>Card 3 Title</h1>
+            <h2>Card 3 URL</h2>
+            <p>
+              Card 3 Text
+            </p>
+          </div>
+          <div class="card-footer">
+            <p>
+              Card 3 footer
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <div class="sidebar">
         <div class="sidebar-header">
-          <h1>Folders</h1>
-          <button class="folder-add-button" id="folder-add-button"><i class="fa-fw fas fa-plus"></i></button>
+          <h1>Tags</h1>
+          <button class="tag-add-button" id="tag-add-button"><i class="fa-fw fas fa-plus"></i></button>
         </div>
 
-        <div class="folders" id="folders">
-          <div class="folder">
-            <a class="folder-icon"><i class="fa-fw fas fa-folder"></i></a> <a class="folder-text">Folder 1</a> <a class="folder-settings hidden"><i class="fa-fw fas fa-cog"></i></a>
+        <div class="tags" id="tags">
+          <div class="tag">
+            <a class="tag-icon"><i class="fa-fw fas fa-tag"></i></a> <a class="tag-text">tag 1</a> <a class="tag-settings hidden"><i class="fa-fw fas fa-cog"></i></a>
           </div>
-          <div class="folder">
-            <a class="folder-icon"><i class="fa-fw fas fa-folder"></i></a> <a class="folder-text">Folder 2</a> <a class="folder-settings hidden"><i class="fa-fw fas fa-cog"></i></a>
+          <div class="tag">
+            <a class="tag-icon"><i class="fa-fw fas fa-tag"></i></a> <a class="tag-text">tag 2</a> <a class="tag-settings hidden"><i class="fa-fw fas fa-cog"></i></a>
           </div>
-          <div class="folder">
-            <a class="folder-icon"><i class="fa-fw fas fa-folder"></i></a> <a class="folder-text">Folder 3</a> <a class="folder-settings hidden"><i class="fa-fw fas fa-cog"></i></a>
+          <div class="tag">
+            <a class="tag-icon"><i class="fa-fw fas fa-tag"></i></a> <a class="tag-text">tag 3</a> <a class="tag-settings hidden"><i class="fa-fw fas fa-cog"></i></a>
           </div>
         </div>
 
-        <div id="folder-modal" class="modal">
+        <div id="tag-modal" class="modal">
           <div class="modal-content">
             <span class="close">&times;</span>
-            <form id="folder-form">
-              <div class="folder-form">
-                <div class="folder-input-name">
-                  <label for="folder-name">Folder name:</label>
-                  <input type="text" name="folder-name" id="folder-name">
+            <form id="tag-form">
+              <div class="tag-form">
+                <div class="tag-input-name">
+                  <label for="tag-name">Tag name:</label>
+                  <input type="text" name="tag-name" id="tag-name">
                 </div>
-                <div class="folder-input-icon">
+                <div class="tag-input-icon">
                   <label>Icon:</label>
-                  <div class="folder-select-wrapper">
-                    <div class="icon-select" id="fa-folder"><i class="fa-fw fas fa-folder"></i></div>
+                  <div class="tag-select-wrapper">
+                    <div class="icon-select" id="fa-tag"><i class="fa-fw fas fa-tag"></i></div>
                     <div class="icon-select" id="fa-book"><i class="fa-fw fas fa-book"></i></div>
                     <div class="icon-select" id="fa-bookmark"><i class="fa-fw fas fa-bookmark"></i></div>
                     <div class="icon-select" id="fa-calendar-alt"><i class="fa-fw fas fa-calendar-alt"></i></div>
@@ -68,9 +127,9 @@
                     <div class="icon-select" id="fa-trash-alt"><i class="fa-fw fas fa-trash-alt"></i></div>
                   </div>
                 </div>
-                <div class="folder-input-color">
+                <div class="tag-input-color">
                   <label>Color:</label>
-                  <div class="folder-select-wrapper">
+                  <div class="tag-select-wrapper">
                     <div class="color-select"><i class="fa-fw fas fa-square"></i></div>
                     <div class="color-select" id="F44336" style="color: #F44336;"><i class="fa-fw fas fa-square"></i></div>
                     <div class="color-select" id="E91E63" style="color: #E91E63;"><i class="fa-fw fas fa-square"></i></div>
@@ -93,41 +152,14 @@
                   </div>
                 </div>
               </div>
-              <div class="folder-form-buttons">
+              <div class="tag-form-buttons">
                 <button type="button" class="button delete-button">Delete</button>
                 <button type="submit" class="button submit-button">Save</button>
               </div>
             </form>
           </div>
         </div>
-
-      </nav>
-
-      <main class="main">
-        <section class="card">
-          <h1>Card 1 Title</h1>
-          <h2>Card 1 URL</h2>
-          <p>
-            Card 1 Text
-          </p>
-        </section>
-
-        <section class="card">
-          <h1>Card 2 Title</h1>
-          <h2>Card 2 URL</h2>
-          <p>
-            Card 2 Text
-          </p>
-        </section>
-
-        <section class="card">
-          <h1>Card 3 Title</h1>
-          <h2>Card 3 URL</h2>
-          <p>
-            Card 3 Text
-          </p>
-        </section>
-      </main>
+      </div>
 
     </div>
 

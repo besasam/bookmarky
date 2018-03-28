@@ -20,52 +20,52 @@ themeToggler.addEventListener("click", function() {
 
 
 
-// Folder tree view
+// tag tree view
 
 let sortable = require('sortablejs');
 
-let folderWrapper = document.getElementById("folders");
-sortable.create(folderWrapper);
+let tagWrapper = document.getElementById("tags");
+sortable.create(tagWrapper);
 
-let folders = document.getElementsByClassName("folder");
-let folderIcons = document.getElementsByClassName("folder-icon");
-let folderTexts = document.getElementsByClassName("folder-text");
-let folderSettings = document.getElementsByClassName("folder-settings");
+let tags = document.getElementsByClassName("tag");
+let tagIcons = document.getElementsByClassName("tag-icon");
+let tagTexts = document.getElementsByClassName("tag-text");
+let tagSettings = document.getElementsByClassName("tag-settings");
 
-for(let i = 0; i < folders.length; i++) {
-  folders[i].addEventListener("mouseenter", function() {
-    folderSettings[i].classList.remove("hidden");
+for(let i = 0; i < tags.length; i++) {
+  tags[i].addEventListener("mouseenter", function() {
+    tagSettings[i].classList.remove("hidden");
   });
-  folders[i].addEventListener("mouseleave", function() {
-    folderSettings[i].classList.add("hidden");
+  tags[i].addEventListener("mouseleave", function() {
+    tagSettings[i].classList.add("hidden");
   });
-  folderIcons[i].addEventListener("dblclick", function() {
-    folders[i].classList.toggle("dbclick");
+  tagIcons[i].addEventListener("dblclick", function() {
+    tags[i].classList.toggle("dbclick");
   });
-  folderTexts[i].addEventListener("click", function() {
-    folders[i].classList.toggle("click");
+  tagTexts[i].addEventListener("click", function() {
+    tags[i].classList.toggle("click");
   });
 }
 
 
 
-// Folder edit modal
+// tag edit modal
 
-let folderModal = document.getElementById('folder-modal');
-let folderAddButton = document.getElementById("folder-add-button");
+let tagModal = document.getElementById('tag-modal');
+let tagAddButton = document.getElementById("tag-add-button");
 let span = document.getElementsByClassName("close")[0];
 
-folderAddButton.onclick = function() {
-  folderModal.style.display = "block";
+tagAddButton.onclick = function() {
+  tagModal.style.display = "block";
 }
 
 span.onclick = function() {
-  folderModal.style.display = "none";
+  tagModal.style.display = "none";
 }
 
 window.onclick = function(event) {
-  if (event.target == folderModal) {
-    folderModal.style.display = "none";
+  if (event.target == tagModal) {
+    tagModal.style.display = "none";
   }
 }
 

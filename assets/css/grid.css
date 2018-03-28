@@ -1,0 +1,279 @@
+/* ============================= *
+ * GLOBAL SIZING AND POSITIONING *
+ * ============================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  width: auto;
+  padding: 20px 10px 20px 10px;
+  margin-bottom: 20px;
+}
+
+.modal-content {
+  margin: 20px auto;
+  padding: 20px;
+  width: 85%;
+  max-width: 600px;
+}
+
+
+/* ============================================== *
+ * FALLBACK FLEXBOX IF NO GRID SUPPORT IN BROWSER *
+ * ============================================== */
+
+@supports not (display: grid) {
+
+  .header {
+    height: 64px;
+    margin-bottom: 20px;
+  }
+
+  .nav {
+    height: 100%;
+    padding: 0 20px 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+
+  .sidebar {
+    margin: 0 10px 0 10px;
+  }
+
+  .main {
+    margin: 0 10px 0 10px;
+  }
+
+  .card {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .card-image {
+    flex: 0 1 25%;
+  }
+
+  .card-image img {
+    width: 22vw;
+    height: 22vw;
+  }
+
+  .card-content {
+    flex: 0 3 75%;
+    padding-left: 10px;
+  }
+
+  .card-footer {
+    flex: 100% 100% 100%;
+  }
+
+  .tag-select-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+
+
+/* =========== *
+ * GRID LAYOUT *
+ * =========== */
+
+@supports (display: grid) {
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 64px auto auto;
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar";
+    grid-gap: 20px;
+  }
+
+  .header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "nav";
+    align-content: center;
+    grid-column-gap: 20px;
+  }
+
+  .nav {
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: auto 40px;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "title buttons"
+  }
+
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header-title {
+    grid-area: title;
+    align-self: center;
+  }
+
+  .header-buttons {
+    grid-area: buttons;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+  }
+
+  .main {
+    grid-area: main;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 100px auto auto;
+    grid-template-areas:
+      "image content"
+      ". content"
+      "footer footer";
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+  }
+
+  .card-image {
+    grid-area: image;
+  }
+
+  .card-image img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card-content {
+    grid-area: content;
+  }
+
+  .card-footer {
+    grid-area: footer;
+  }
+
+  .tag-form {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "name"
+      "icon"
+      "color";
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+  }
+
+  .tag-input-name {
+    grid-area: name;
+  }
+
+  .tag-input-icon {
+    grid-area: icon;
+  }
+
+  .tag-input-color {
+    grid-area: color;
+  }
+
+  .tag-select-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: start;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 899px) {
+    .sidebar {
+      margin: 0 10px 0 10px;
+    }
+
+    .nav {
+      padding: 0 20px 0 20px;
+    }
+
+    .main {
+      margin: 0 10px 0 10px;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    .container {
+      grid-template-columns: 1fr 5fr 11fr 1fr;
+      grid-template-rows: 64px auto;
+      grid-template-areas:
+        "header header header header"
+        ". sidebar main .";
+      grid-gap: 20px;
+    }
+
+    .header {
+      grid-template-columns: 1fr 16fr 1fr;
+      grid-template-areas:
+        ". nav .";
+    }
+
+    .tag-form {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "name name"
+        "icon color";
+    }
+
+    .modal-content {
+      margin: 84px auto;
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    .container {
+      grid-template-columns: 2fr 5fr 11fr 2fr;
+      grid-template-rows: 64px auto;
+      grid-template-areas:
+        "header header header header"
+        ". sidebar main .";
+      grid-gap: 20px;
+    }
+
+    .header {
+      grid-template-columns: 2fr 16fr 2fr;
+      grid-template-areas:
+        ". nav .";
+    }
+
+    .card {
+      display: grid;
+      grid-template-columns: 150px auto;
+      grid-template-rows: 150px auto auto;
+    }
+
+    .card-image img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+}

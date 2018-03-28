@@ -4,7 +4,7 @@ body {
 }
 
 .nav h1 {
-  color: white;
+  color: #FAFAFA;
 }
 
 .sidebar-header {
@@ -15,12 +15,12 @@ body {
   color: #BDBDBD;
 }
 
-.folder-add-button {
+.tag-add-button {
   color: #BDBDBD;
 }
 
-.folder-add-button:hover {
-  color: white;
+.tag-add-button:hover {
+  color: #FAFAFA;
 }
 
 .fa-li {
@@ -28,7 +28,7 @@ body {
 }
 
 .card {
-  background-color: #424242;
+  background-color: #303030;
 }
 
 .card h2 {
