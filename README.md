@@ -15,9 +15,11 @@ TBA.
 Currently, only the UI is (almost) done but with no functionality yet. The first finished version will allow you to save links from the web in folders which you can add, edit and customize.
 
 **Planned features:**  
-⬜ Collapsible nested folders  
+⬜ ~~Collapsible nested folders~~ Maybe do away with the folders entirely and instead use tags with multi-filtering?  
 ⬜ Preview image in saved links  
-⬜ Login for synchronization between devices  
-⬜ Browser plugin to save links via context menu
+⬜ Synchronization between devices  
+⬜ Browser plugin to save links via context menu  
+⬜ Mobile app  
+⬜ Notes (similar to Google Keep)
 
 If you have any more ideas or feature requests, feel free to let me know!
