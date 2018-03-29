@@ -1,0 +1,75 @@
+$grey-50:   #FAFAFA
+$grey-100:  #F5F5F5
+$grey-200:  #EEEEEE
+$grey-300:  #E0E0E0
+$grey-400:  #BDBDBD
+$grey-500:  #9E9E9E
+$grey-600:  #757575
+$grey-700:  #616161
+$grey-800:  #424242
+$grey-900:  #212121
+
+$bg:              $grey-50
+$bg-hover:        $grey-100
+$bg-active:       $grey-200
+$text-primary:    $grey-900
+$text-secondary:  $grey-600
+$border:          1px solid $grey-300
+
+
+body
+  background-color: $bg
+  color: $text-primary
+
+.sidebar-header
+  border-bottom: $border
+  h1
+    color: $text-secondary
+
+.tag-add-button
+  color: $text-secondary
+  &:hover
+    color: $text-primary
+
+.tag
+  &:hover
+    background-color: $bg-hover
+
+.tag-icon
+  color: $text-secondary
+
+.tag-settings
+  color: $text-secondary
+  &:hover
+    color: $text-primary
+
+.card
+  background-color: $bg-hover
+  h2
+    color: $text-secondary
+  img
+    border: $border
+  .card-footer
+    p
+      color: $text-secondary
+
+.modal-content
+  background-color: $bg
+
+.tag-form
+  input
+    background-color: #FFFFFF
+    color: $text-primary
+    border: $border
+  .select
+    color: $text-secondary
+    &:hover
+      background-color: $bg-hover
+  .select-active
+    background-color: $bg-active
+    &:hover
+      background-color: $bg-active
+  .icon-select
+    color: $text-secondary
+  h2
+    color: $text-secondary

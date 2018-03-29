@@ -1,40 +1,57 @@
 body {
   background-color: #212121;
-  color: #EEEEEE;
-}
-
-.nav h1 {
-  color: #FAFAFA;
-}
+  color: #EEEEEE; }
 
 .sidebar-header {
-  border-bottom: 1px solid #424242;
-}
-
-.sidebar-header h1 {
-  color: #BDBDBD;
-}
+  border-bottom: 1px solid #424242; }
+  .sidebar-header h1 {
+    color: #BDBDBD; }
 
 .tag-add-button {
-  color: #BDBDBD;
-}
+  color: #BDBDBD; }
+  .tag-add-button:hover {
+    color: #EEEEEE; }
 
-.tag-add-button:hover {
-  color: #FAFAFA;
-}
+.tag:hover {
+  background-color: #303030; }
 
-.fa-li {
-  color: #BDBDBD;
-}
+.tag-icon {
+  color: #BDBDBD; }
+
+.tag-settings {
+  color: #BDBDBD; }
+  .tag-settings:hover {
+    color: #EEEEEE; }
 
 .card {
-  background-color: #303030;
-}
-
-.card h2 {
-  color: #BDBDBD;
-}
+  background-color: #303030; }
+  .card h2 {
+    color: #BDBDBD; }
+  .card img {
+    border: 1px solid #424242; }
+  .card .card-footer p {
+    color: #BDBDBD; }
 
 .modal-content {
-    background-color: #212121;
-}
+  background-color: #212121; }
+
+.tag-form input {
+  background-color: #000000;
+  color: #EEEEEE;
+  border: 1px solid #424242; }
+
+.tag-form .select {
+  color: #BDBDBD; }
+  .tag-form .select:hover {
+    background-color: #303030; }
+
+.tag-form .select-active {
+  background-color: #424242; }
+  .tag-form .select-active:hover {
+    background-color: #424242; }
+
+.tag-form .icon-select {
+  color: #BDBDBD; }
+
+.tag-form h2 {
+  color: #BDBDBD; }

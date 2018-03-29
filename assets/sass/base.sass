@@ -1,0 +1,213 @@
+$primary:       #3F51B5
+$primary-dk-1:  #303F9F
+$primary-dk-2:  #283593
+
+*
+  font-family: 'Open Sans', sans-serif
+  font-weight: 400
+  font-size: 16px
+  box-sizing: border-box
+
+html,
+body,
+ul,
+ol
+  margin: 0
+  padding: 0
+
+.header
+  background-color: $primary
+  box-shadow: 0 0 3px 0 rgba(0,0,0,0.5)
+
+.nav
+  *
+    display: inline
+
+.header-title
+  h1
+    font-family: 'Berkshire Swash', cursive
+    font-size: 26px
+    font-weight: 300
+    color: #FFFFFF
+
+.header-logo
+  font-size: 24px
+  margin: 0 5px 0 0
+
+.theme-toggle
+  border: none
+  background-color: $primary-dk-1
+  color: #FFFFFF
+  font-size: 13px
+  margin: 0
+  padding: 10px
+  border-radius: 50%
+  transition: all .3s ease
+  cursor: pointer
+  &:hover
+    background-color: $primary-dk-2
+
+.sidebar-header
+  padding: 0 0 20px 0
+  *
+    display: inline
+  h1
+    font-weight: 700
+    font-size: 16px
+    text-transform: uppercase
+
+.tag-add-button
+  border: none
+  font-size: 14px
+  background-color: transparent
+  margin: -4px 0 0 0
+  padding: 5px
+  cursor: pointer
+  float: right
+
+.tags
+  margin: 10px 0 0 0
+
+.tag
+  background-color: transparent
+  border: none
+  border-radius: 5px
+  width: 100%
+  padding: 10px 0 10px 5px
+  margin: 0 0 5px 0
+  cursor: pointer
+  user-select: none
+
+.tag-icon
+  font-size: 20px
+  margin-right: 10px
+
+.tag-text
+  font-weight: 500
+
+.tag-settings
+  float: right
+  font-size: 14px
+  padding: 4px 5px 0 0
+
+.hidden
+  visibility: hidden
+
+.card
+  width: auto
+  margin: 0 0 20px 0
+  padding: 20px 10px 20px 10px
+  border-radius: 5px
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2)
+  h1
+    margin: 0
+    font-size: 20px
+    font-weight: 500
+  h2
+    margin: 0
+    font-size: 14px
+  img
+    max-width: 100%
+    object-fit: cover
+    border-radius: 50%
+  .card-footer
+    p
+      margin: 0
+      font-size: 14px
+      font-weight: 500
+
+.modal
+  display: none
+  position: fixed
+  z-index: 1
+  left: 0
+  top: 0
+  width: 100vw
+  height: 100vh
+  overflow: auto
+  background-color: rgba(0,0,0,0.4)
+
+.modal-content
+  border-radius: 5px
+  padding: 0
+
+.modal-header
+  background-color: $primary
+  width: 100%
+  height: 50px
+  margin: 0 0 10px 0
+  padding: 0 20px 0 20px
+  border-radius: 5px 5px 0 0
+  box-shadow: 0 0 3px 0 rgba(0,0,0,0.5)
+  *
+    display: inline
+  h1
+    color: #FFFFFF
+    line-height: 50px
+    font-size: 18px
+    font-weight: 500
+    .modal-header-icon
+      font-size: 14px
+      margin: 0 10px 4px 0
+  .close
+    float: right
+    font-size: 14px
+    margin: 10px 0 0 0
+    padding: 5px
+    border-radius: 50%
+    color: #FFFFFF
+    background-color: $primary-dk-1
+    cursor: pointer
+    &:hover,
+    &:focus
+      background-color: $primary-dk-2
+      text-decoration: none
+
+.modal-body
+  padding: 20px
+
+.tag-form
+  input
+    width: 100%
+    padding: 10px
+    border-radius: 5px
+    font-weight: 500
+  .select
+    font-size: 30px
+    border-radius: 50%
+    line-height: 60px
+    text-align: center
+    width: 100%
+    height: 100%
+    cursor: pointer
+  h2
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    margin: 20px 0 10px 0
+
+.tag-form-buttons
+  text-align: right
+  margin: 20px 10px 0 0
+
+.button
+  border: none
+  padding: 10px 20px 10px 20px
+  border-radius: 5px
+  font-weight: 500
+  cursor: pointer
+  transition: all .1s ease
+
+.submit-button
+  background-color: #4CAF50
+  color: #FFFFFF
+  margin: 0 0 0 5px
+  &:hover
+    background-color: #43A047
+
+.delete-button
+  background-color: transparent
+  color: #F44336
+  &:hover
+    background-color: #F44336
+    color: #FFFFFF

@@ -1,40 +1,57 @@
 body {
   background-color: #FAFAFA;
-  color: #212121;
-}
-
-.nav h1 {
-  color: white;
-}
+  color: #212121; }
 
 .sidebar-header {
-  border-bottom: 1px solid #E0E0E0;
-}
-
-.sidebar-header h1 {
-  color: #757575;
-}
+  border-bottom: 1px solid #E0E0E0; }
+  .sidebar-header h1 {
+    color: #757575; }
 
 .tag-add-button {
-  color: #757575;
-}
+  color: #757575; }
+  .tag-add-button:hover {
+    color: #212121; }
 
-.tag-add-button:hover {
-  color: #212121;
-}
+.tag:hover {
+  background-color: #F5F5F5; }
 
-.fa-li {
-  color: #757575;
-}
+.tag-icon {
+  color: #757575; }
+
+.tag-settings {
+  color: #757575; }
+  .tag-settings:hover {
+    color: #212121; }
 
 .card {
-  background-color: #F5F5F5;
-}
-
-.card h2 {
-  color: #757575;
-}
+  background-color: #F5F5F5; }
+  .card h2 {
+    color: #757575; }
+  .card img {
+    border: 1px solid #E0E0E0; }
+  .card .card-footer p {
+    color: #757575; }
 
 .modal-content {
-    background-color: #FAFAFA;
-}
+  background-color: #FAFAFA; }
+
+.tag-form input {
+  background-color: #FFFFFF;
+  color: #212121;
+  border: 1px solid #E0E0E0; }
+
+.tag-form .select {
+  color: #757575; }
+  .tag-form .select:hover {
+    background-color: #F5F5F5; }
+
+.tag-form .select-active {
+  background-color: #EEEEEE; }
+  .tag-form .select-active:hover {
+    background-color: #EEEEEE; }
+
+.tag-form .icon-select {
+  color: #757575; }
+
+.tag-form h2 {
+  color: #757575; }
